@@ -1,1 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: white;
+    font-family:'Roboto',sans-serif;
+}
 
+.page {
+    padding: 20px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    width: 100%
+}
+
+.nav-links-r {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 45%;
+}
+
+.nav-item {
+    padding: 0px 5px;
+}
+
+.number {
+    display: inline;
+}
+
+.heading {
+    width: 100%;
+}
+
+.hero{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.title {
+    padding: 150px 0px;
+}
+
+h2 {
+    font-size: 9vh;
+    line-height: 9vh;
+    
+}
+
+h1, h2 {
+    font-weight: 400;
+}
