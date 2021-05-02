@@ -67,34 +67,36 @@ li p:hover {
 }
 
 .heading-number {
-    font-size: 2.2vh;
+    font-size: 2vh;
     display: inline;
     position: relative;
     bottom: 42px;
-    left: 12px;
+    left: 22px;
     font-weight: 100;
 }
 
 .heading-name h1 {
-    font-size: 9vh;
+    font-size: 6.5vh;
     text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white; 
     color: black;
-    padding: 50px 0px 0px 130px;
+    padding: 50px 0px 0px 280px;
+    font-style: italic;
 }
 
 .hero {
-margin-top: 130px;
+margin-top: 85px;
 flex-wrap: nowrap;
 justify-content: center;
 }
 
+
 .title {
-    padding: 55px 0px 0px 360px;
+    padding: 0px 0px 0px 150px;
     width: 100%;
 }
 
 h2 {
-    font-size: 9vh;
+    font-size: 10vh;
     line-height: 9vh;
     position: relative;
     width: 100%;
@@ -133,8 +135,20 @@ h1, h2 {
     color: #000000;
 }
 
-.hero {
-    padding: 0px 0px 100px;
+
+.hero-image-cont {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -30px;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none; 
+}
+
+.hero-image {
+    width: 50%;
+    padding-right: 200px;
 }
 
 .about-container {
@@ -149,8 +163,12 @@ h1, h2 {
     padding-bottom: 25px;;
 }
 
+.grid-container {
+    padding-top: 10px;
+}
+
 .work-container {
-    padding: 40px;
+    padding: 5px 40px 40px 40px;
 }
 
 .grid-container {
