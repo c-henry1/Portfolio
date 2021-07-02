@@ -2,36 +2,42 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: white;
+    color: black;
     font-family:'Roboto',sans-serif;
 }
 
 body {
-    background-color: black;
+    background-color:white;
 }
 
 .logo:hover {
-    color:#000000;
-    background-color: white;
+    color:white;
+    background-color:black;
 }
 
 a {
     text-decoration: none;
-    
 }
 
 li a:hover {
-    color:#000000;
-    background-color: white;
+    color:#ffffff;
+    background-color: black;
 }
 
 li p:hover {
     color:#000000;
-    background-color: white;
+    background-color: black;
 }
 
 .page {
-    padding: 20px;
+    scroll-snap-type: both mandatory ;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 .nav-bar {
@@ -59,13 +65,18 @@ li p:hover {
 
 .number {
     display: inline;
+    font-size: 11px;
+}
+
+.nav-item{
+    font-size: 14px;
 }
 
 .burger div {
     width: 22px;
     height: 3px;
     margin: 5px;
-    background-color:  #ffffff ;
+    background-color: black ;
     display: none;
     transition: all 0.3s ease;
 }
@@ -75,15 +86,32 @@ li p:hover {
 }
 
 .hero {
-margin-top: 60px;
-flex-wrap: nowrap;
-justify-content: center;
+    margin-top: 0px;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.vid-wrap {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.slides-wrap {
+    width: 50%;
+    display: flex;
 }
 
 .mySlides {
-    width: 70%;
-    height: 30vh;
+    width: 100%;
+    height: 500px;
     object-fit: cover;
+    padding: 80px 0px 80px 130px;
+    object-fit: contain;
 }
 
 .title {
@@ -101,8 +129,8 @@ justify-content: center;
 }
 
 .button1 {
-    color: white;
-    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
     font-size: 2.5vh;
     font-weight: 100;
 }
@@ -120,16 +148,6 @@ justify-content: center;
     background-color: rgba(0, 0, 0, 0);
     pointer-events: none; 
     padding-top: 0px;
-}
-
-.slides-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image {
-    width: 50%;
 }
 
 .about-container {
@@ -154,6 +172,10 @@ justify-content: center;
     padding-bottom: 6px;
 }
 
+.projects-section {
+    height: 100vh;
+}
+
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
@@ -161,15 +183,26 @@ justify-content: center;
 }
 
 .project-card {
-    border-bottom: 1px solid white;
-    width: 30%;
-    padding: 10px;
-    margin: 60px;  
-    height: 210px 
+    border-bottom: 1px solid black;
+    width: 80%;
+    padding: 5px;
+    margin: 130px 80px 0px 80px;  
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#card-1{
+    margin-bottom: -100px;
+}
+
+#card-2{
+    margin-bottom: -100px;
 }
 
 #card-1:hover{
-    background:url(Images/jungala-comp.png) no-repeat 50% 50%;
+    background:url(Images/image1.jpg) no-repeat 50% 50%;
     background-size:cover;
 }
 
@@ -188,17 +221,39 @@ justify-content: center;
     background-size:cover;
 }
 
+.project-card:hover .project-title  {
+    color:black;
+    background-color: white;
+}
+
+.project-card:hover .project-role  {
+    color:black;
+    background-color: white;
+}
+
+.project-card:hover .project-description  {
+    color:black;
+    background-color: white;
+}
+
 .project-title {
-    font-size: 30px;
-    padding-bottom: 5px;
+    font-size: 23px;
+    display: inline-block;
+    padding: 3px;
+    width: 100%;
 }
 
 .project-role {
     font-size: 14px;
+    display: inline-block;
+    padding: 3px;
+    width: 100%;
 }
 
 .project-description {
-    padding: 20px 0px;
+    display: inline-block;
+    padding: 3px;
+    width: 100%;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -207,21 +262,49 @@ justify-content: center;
         position: relative;
         width: 100%;
     }
-
+ 
     .button1 {
         font-size: 2vh;
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .vid-wrap {
+        width: 70%;
+    }
+
+    .slides-wrap {
+        width: 100%;
+    }
+
+    .mySlides {
+        padding: 0px;
     }
 }
 
 @media only screen and (max-width: 800px) {
 
     .work-image {
-        width: 100%;
-        
-     }
+        width: 100%;   
+    }
 
     .button1 {
         font-size: 2vh;
+    }
+
+    .page {
+        scroll-snap-type: none ;
+        overflow-y: none;
+        height: 100vh;
+    }
+    
+    section {
+        height: 100vh;
+        scroll-snap-align: none;
     }
 }
 
@@ -233,11 +316,11 @@ justify-content: center;
 
     .nav-elements-r {
         position: fixed;
-        height: 80vh;
-        background-color: black;
+        height: 100vh;
+        background-color: white;
         width: 100%;
         height: 100%;
-        top: 50px;
+        top: 0px;
         left: 0;
         display: flex;
         flex-direction: column;
@@ -248,15 +331,19 @@ justify-content: center;
         transition: all 0.2s ease;     
     }
 
+    .burger{
+        z-index: 100;
+    }
+
     li a:hover {
-        text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
-        color: #000000;
+        text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+        color: white;
         background-color: #000000;
     }
 
     li p:hover {
-        color: white;
-        background-color: black;
+        color: black;
+        background-color: white;
     }
     
     .nav-elements-r a {
@@ -301,6 +388,6 @@ justify-content: center;
     }
 
     .hero {
-        padding-top: 10px;
+        padding-top: 40px;
     }
 }
